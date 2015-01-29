@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <ThinkEgyptian_CustomLayout>
+      <version>0.1.0</version>
+    </ThinkEgyptian_CustomLayout>
+  </modules>
+  <global>
+    <helpers>
+      <customlayout>
+        <class>ThinkEgyptian_Layout_Helper</class>
+      </customlayout>
+    </helpers>
+	  <page>
+      <layouts>
+  		<!-- about page template -->
+  		<fullwidth_page module="page" translate="label">
+  			<label>Full Width Layout</label>
+  			<template>page/fullwidth-page.phtml</template>
+  			<layout_handle>fullwidth_page</layout_handle>
+  		</fullwidth_page>
+  		<!-- Editions Template -->
+  		<!--<editions_template module="page" translate="label">
+  			<label>Editions Template</label>
+  			<template>page/editions-template.phtml</template>
+  			<layout_handle>editions_template</layout_handle>
+  		</editions_template>-->
+      </layouts>
+    </page>
+  </global>
+</config> 

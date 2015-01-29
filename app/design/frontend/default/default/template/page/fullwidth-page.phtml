@@ -1,0 +1,43 @@
+<?php
+/**
+ * 1 Column Template
+ */
+?>
+<!DOCTYPE html>
+<!--[if lt IE 7]>	<html lang="<?php echo $this->getLang() ?>" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>	<html lang="<?php echo $this->getLang() ?>" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>	<html lang="<?php echo $this->getLang() ?>" class="no-js lt-ie9"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="<?php echo $this->getLang() ?>" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a></p>
+<![endif]-->
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div class="wrapper">
+    <?php echo $this->getChildHtml('global_notices') ?>
+    <div class="page">
+        <?php echo $this->getChildHtml('header') ?>
+        <?php //echo $this->getChildHtml('header_after') ?> 
+        <div class="main-container col1-layout">
+            <?php echo $this->getChildHtml('breadcrumbs') ?>
+            <div class="main">
+                <div class="col-main" data-twttr-rendered="true" itemscope itemtype="http://schema.org/WebPage">
+                    <?php echo $this->getChildHtml('global_messages') ?>
+                    <?php echo $this->getChildHtml('content') ?>
+                </div>
+            </div>
+        </div>
+        <?php //echo $this->getChildHtml('footer_before') ?>
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+    </div>
+</div>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>
